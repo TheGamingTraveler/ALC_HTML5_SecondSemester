@@ -5,7 +5,47 @@ multi line comment
 //alert("Warning Will Robinson...Warning");
 //confirm("do you like digimon?");
 //prompt("what kind of digimon do you like?");
-
+/*switch(var){
+        case "option1":
+            var(var) var = alert,prompt,comfirm();
+        break;
+        case "option2":
+            alert,prompt,comfirm();
+        break;
+        case "option3":
+            alert,prompt,comfirm();
+        break;
+        default: 
+            alert(""+ var + "");
+        break
+}        */
+//js objects
+/*var inventory = {
+        coins:1000,
+        bread:0,
+        sword:0,
+        map:0,
+        
+}       
+function Blacksmith(){
+    alert(alert);
+    
+    var blacksmith = prompt("")
+        if(blacksmith == "sword" || blacksmith == "buy sword" && inventory.coin >= 100){
+            if(swordbuy){
+            inventory.sword ++:
+            alert();
+            inventory.coins -= 100;
+            alert("you have"+inventory.coin+"coins")
+            Blacksmith();
+            }
+            else{
+            alert("");
+            Village;
+            }
+        }
+}
+*/
 
 
 
@@ -20,6 +60,7 @@ Game();
 
 function Game(){
     alert("Helix Spire");
+    alert("this game is in work in progress, so if there is any bugs or mistakes that I have made or have any ideas that I can add to the game, plz let me know.");
     var playerName = prompt("What Is Your Name, Outworlder?");
     alert("Welcome to the Continent of Utera "+ playerName);
     //Centeria Wilds
@@ -35,13 +76,17 @@ function Game(){
                 }
     }
         if(centeriaWildsLook == "follow the path to the right"){
-            var guardEnterence = prompt("You start following the path to the right, as your walking on the path you see a stone wall with guard towers. You believe its a town so you go near it, when you almost got to the enterence the guards stop you in your tracks and ask what you are there for. \n -tell the truth \n -tell a lie \n Both of these options will change the way you play until you are out of the town so think this through. ");
+           Centeria_Guard_Enterence();
+            
+            function centeriaGuardEnterence(){
+                
+            }
         }
         
     }
     //The Town Of Centeria
     function Town_of_Centeria(){
-        var townOfCenteriaWest = prompt("You have entered Centeria, town of relics and study.")
+        var townOfCenteriaWest = prompt("You have entered Centeria, town of excavation and study.")
         
         if(townOfCenteriaWest == "talk" || townOfCenteriaWest == "talk to locals"){
             alert("You try to talk to a local of the town but they cant understand what your saying but you hear them mumble something");
