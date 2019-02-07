@@ -46,6 +46,7 @@ function Blacksmith(){
         }
 }
 */
+/* var wizardNames = ["bethazar", "mordac", "grendor"];    */
 
 
 
@@ -78,8 +79,16 @@ function Game(){
         if(centeriaWildsLook == "follow the path to the right"){
            Centeria_Guard_Enterence();
             
-            function centeriaGuardEnterence(){
-                
+            function Centeria_Guard_Enterence(){
+                var centeriaGuardEnterence = prompt("You go right on the dirt path. While walking on the path you see what looks like a stone wall with a arch way, when you get closer to the enterence the guards tell you to stop where you are. you stop as they said, the guards ask what you purpose of entering the town. \n -tell the truth \n -tell a lie");
+                    if(centeriaGuardEnterence == "tell the truth"){
+                        alert("you tell the guards that you are from another world, you tell them that you died in you previous life and suddenly woke up in the middle of the field. The guards laugh and tell you to follow them into one of the rooms and wait inside while they can get you permission into the town.");
+                        Town_of_Centeria();
+                    }
+                else if(centeriaGuardEnterence == "tell a lie"){
+                    alert("you try to make up a story but the guards weren't buying it so the accused you of being a wanted criminal and was shot on site.");
+                    Centeria_Wilds();
+                }
             }
         }
         
@@ -89,10 +98,10 @@ function Game(){
         var townOfCenteriaWest = prompt("You have entered Centeria, town of excavation and study.")
         
         if(townOfCenteriaWest == "talk" || townOfCenteriaWest == "talk to locals"){
-            alert("You try to talk to a local of the town but they cant understand what your saying but you hear them mumble something");
+            prompt("You try to talk to a local of the town but they cant understand what your saying but you hear them mumble something");
         }
         else if(townOfCenteriaWest == "walk around" || townOfCenteriaWest == "walk around and look"){
-            var centeriaPath = prompt(" \n -ask locals \n -keep walking");
+            var centeriaPath = prompt("you walk around. \n -ask locals \n -keep walking");
             
             if(centeriaPath == "ask locals"){
                 alert("the local looks at you strangly.");
