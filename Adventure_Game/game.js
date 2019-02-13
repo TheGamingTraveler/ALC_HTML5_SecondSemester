@@ -74,6 +74,7 @@ function Game(){
             var centeriaWildsLook = prompt("You see a dirt path. When you look at the path you see that it has been recently used, you also see holes in the path. \n -go near the holes \n -follow the path to the right \n -follow the path to the left");
                 if(centeriaWildsLook == "go near the holes"){
                 prompt("You examine the holes, you feel heat coming off of the holes. You also sense a weird feeling coming off the holes also. \n -follow the path to the right \n -follow the path to the left");
+                    alert("If you are reading this then you have encountered one of the problems that Im trying to fix.");
                 }
     }
         if(centeriaWildsLook == "follow the path to the right"){
@@ -95,7 +96,8 @@ function Game(){
     }
     //The Town Of Centeria
     function Town_of_Centeria(){
-        var townOfCenteriaWest = prompt("You have entered Centeria, town of excavation and study.")
+        var townOfCenteriaWest = alert("You have entered Centeria, town of excavation and study.");
+        prompt("You got into the town, everyone that you see is walking around doing what they need to do for the day. You were thinging to yourself that you were lucky that the guards understood what you said but right now you need to find some information on what this world is. \n -talk to locals \n -walk around");
         
         if(townOfCenteriaWest == "talk" || townOfCenteriaWest == "talk to locals"){
             prompt("You try to talk to a local of the town but they cant understand what your saying but you hear them mumble something");
@@ -113,7 +115,7 @@ function Game(){
         }
         else{
             alert("I dont understand" + townOfCenteriaWest);
-            townOfCenteriaWest();
+            Town_of_Centeria();
         }
     }
     //the Strangers House
