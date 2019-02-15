@@ -47,6 +47,11 @@ function Blacksmith(){
 }
 */
 /* var wizardNames = ["bethazar", "mordac", "grendor"];    */
+/*     
+var checkInv = function(){
+    alert("Gold Coins:"+inventory.coins.gold+"\n Silver Coins:"+inventory.coins.silver+"\n Copper Coins:"+inventory.coins.copper);
+}
+*/
 
 
 
@@ -60,7 +65,7 @@ function Blacksmith(){
 Game();
 
 function Game(){
-    alert("Helix Spire");
+    alert("The Crystalline Mists");
     alert("this game is in work in progress, so if there is any bugs or mistakes that I have made or have any ideas that I can add to the game, plz let me know.");
     var playerName = prompt("What Is Your Name, Outworlder?");
     alert("Welcome to the Continent of Utera "+ playerName);
@@ -77,7 +82,7 @@ function Game(){
                     alert("If you are reading this then you have encountered one of the problems that Im trying to fix.");
                 }
     }
-        if(centeriaWildsLook == "follow the path to the right"){
+        if(centeriaWildsLook == "follow the path to the right" || centeriaWildsLook == "right"){
            Centeria_Guard_Enterence();
             
             function Centeria_Guard_Enterence(){
@@ -99,24 +104,11 @@ function Game(){
         var townOfCenteriaWest = alert("You have entered Centeria, town of excavation and study.");
         prompt("You got into the town, everyone that you see is walking around doing what they need to do for the day. You were thinging to yourself that you were lucky that the guards understood what you said but right now you need to find some information on what this world is. \n -talk to locals \n -walk around");
         
-        if(townOfCenteriaWest == "talk" || townOfCenteriaWest == "talk to locals"){
-            prompt("You try to talk to a local of the town but they cant understand what your saying but you hear them mumble something");
+        if(townOfCenteriaWest == "talk to the locals" || townOfCenteriaWest == "talk"){
+            alert("You try to talk to the locals but they cant understand you. while you walk past them you heared them mumble something.");
         }
-        else if(townOfCenteriaWest == "walk around" || townOfCenteriaWest == "walk around and look"){
-            var centeriaPath = prompt("you walk around. \n -ask locals \n -keep walking");
-            
-            if(centeriaPath == "ask locals"){
-                alert("the local looks at you strangly.");
-            }
-            else if(centeriaPath == "keep walking" || centeriaPath == "walk"){
-                alert("You keep walking, while on your walk you encounter someone that looks like they're from your world. The stranger spots you and asks you to follow them.");
-                Strangers_House();
-            }
-        }
-        else{
-            alert("I dont understand" + townOfCenteriaWest);
-            Town_of_Centeria();
-        }
+        
+      
     }
     //the Strangers House
     function Strangers_House(){
