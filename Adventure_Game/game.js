@@ -21,7 +21,7 @@ multi line comment
 }        */
 //js objects
 /*var inventory = {
-        coins:1000,
+        coin:1000,
         bread:0,
         sword:0,
         map:0,
@@ -64,6 +64,15 @@ var checkInv = function(){
 //# = option placeholder
 Game();
 
+var inventory ={
+    coin:0000,
+    mana:0000,
+    damage:0010,
+    weapon:0,
+    weight:0000,
+    death:000,
+}
+
 function Game(){
     alert("The Crystalline Mists");
     alert("this game is in work in progress, so if there is any bugs or mistakes that I have made or have any ideas that I can add to the game, plz let me know.");
@@ -87,12 +96,16 @@ function Game(){
             
             function Centeria_Guard_Enterence(){
                 var centeriaGuardEnterence = prompt("You go right on the dirt path. While walking on the path you see what looks like a stone wall with a arch way, when you get closer to the enterence the guards tell you to stop where you are. you stop as they said, the guards ask what you purpose of entering the town. \n -tell the truth \n -tell a lie");
-                    if(centeriaGuardEnterence == "tell the truth"){
+                    if(centeriaGuardEnterence == "tell the truth" || centeriaGuardEnterence == "truth"){
                         alert("you tell the guards that you are from another world, you tell them that you died in you previous life and suddenly woke up in the middle of the field. The guards laugh and tell you to follow them into one of the rooms and wait inside while they can get you permission into the town.");
                         Town_of_Centeria();
                     }
                 else if(centeriaGuardEnterence == "tell a lie"){
                     alert("you try to make up a story but the guards weren't buying it so the accused you of being a wanted criminal and was shot on site.");
+                    /*if(tellLie){
+                        inventory.death ++:
+                    }
+                    */
                     Centeria_Wilds();
                 }
             }
@@ -101,18 +114,24 @@ function Game(){
     }
     //The Town Of Centeria
     function Town_of_Centeria(){
-        var townOfCenteriaWest = alert("You have entered Centeria, town of excavation and study.");
-        prompt("You got into the town, everyone that you see is walking around doing what they need to do for the day. You were thinging to yourself that you were lucky that the guards understood what you said but right now you need to find some information on what this world is. \n -talk to locals \n -walk around");
+        alert("You have entered Centeria, town of excavation and study.");
+        var townOfCenteriaWest = prompt("You got into the town, everyone that you see is walking around doing what they need to do for the day. You were thinging to yourself that you were lucky that the guards understood what you said but right now you need to find some information on what this world is. \n -talk to locals \n -walk around");
+            if(townOfCenteriaWest == "talk to locals" || townOfCenteriaWest == "talk"){
+                alert("You try to talk to the locals but they cant understand you. while you walk past them you heared them mumble something.");
+        }   
         
-        if(townOfCenteriaWest == "talk to the locals" || townOfCenteriaWest == "talk"){
-            alert("You try to talk to the locals but they cant understand you. while you walk past them you heared them mumble something.");
+            else if(townOfCenteriaWest == "walk around" || townOfCenteriaWest == "walk"){
+                prompt("you walk around the town, the people around you start to stare and question why your there.\n -walk some more \n -relax by a wall \n -Whats in the alley");
+                if(townOfCenteriaWest == "walk some more" || townOfCenteriaWest == "keep walking"){
+                    alert("you keep walking but before you got any further someone grabbed you and was taking you somewhere \n -tell them to let go \n -ask where they're going \n -")
+                }
         }
         
       
     }
     //the Strangers House
     function Strangers_House(){
-        var strangersHouse = prompt("You followed the stranger to their house and they welcome you in. ");
+        var strangersHouse = prompt("You followed the stranger to their home and they welcome you in. ");
     }
 }
 
