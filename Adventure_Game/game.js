@@ -67,10 +67,6 @@ Game();
 var inventory ={
     coin:0000,
     mana:0000,
-    damage:0010,
-    weapon:0,
-    weight:0000,
-    death:000,
 }
 
 function Game(){
@@ -78,6 +74,16 @@ function Game(){
     alert("this game is in work in progress, so if there is any bugs or mistakes that I have made or have any ideas that I can add to the game, plz let me know.");
     var playerName = prompt("What Is Your Name, Outworlder?");
     alert("Welcome to the Continent of Utera "+ playerName);
+    //level select/Afterlife
+    Afterlife();
+    
+    function Afterlife(){
+        var afterLife = prompt("You are in the afterlife, the world that you lived in is gone and you are all alone... for now. You will be sent to a new world to continue you life for it ended too short. the world that your being sent to is Alioria, a world full of magic but you wont be able to you the magic until you meet someone who will teach you how to use it and unlock you hidden potential. Now pick a place to start you adventure. \n - Centeria Wilds \n - Town of Centeria \n - The Stranger's house \n - The lost");
+    }
+    
+    
+    
+    
     //Centeria Wilds
     Centeria_Wilds();
     
@@ -102,10 +108,6 @@ function Game(){
                     }
                 else if(centeriaGuardEnterence == "tell a lie"){
                     alert("you try to make up a story but the guards weren't buying it so the accused you of being a wanted criminal and was shot on site.");
-                    /*if(tellLie){
-                        inventory.death ++:
-                    }
-                    */
                     Centeria_Wilds();
                 }
             }
@@ -114,6 +116,7 @@ function Game(){
     }
     //The Town Of Centeria
     function Town_of_Centeria(){
+        alert("Congrats "+ playerName +" you have made it past the first part of your adventure. You may leave and start over or continue your adventure and see what this world is about" );
         alert("You have entered Centeria, town of excavation and study.");
         var townOfCenteriaWest = prompt("You got into the town, everyone that you see is walking around doing what they need to do for the day. You were thinging to yourself that you were lucky that the guards understood what you said but right now you need to find some information on what this world is. \n -talk to locals \n -walk around");
             if(townOfCenteriaWest == "talk to locals" || townOfCenteriaWest == "talk"){
